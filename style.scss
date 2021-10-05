@@ -1,0 +1,148 @@
+$breakpoints: ( 'sm': ( min-width: 576px ), 'md': ( min-width: 768px ), 'lg': ( min-width: 992px ), 'xl': ( min-width: 1200px ), 'xxl': ( min-width: 1400px ), ) !default;
+
+@mixin on($breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+        @content;
+    }
+}
+
+body {
+    font-family: 'Rum Raisin', sans-serif;
+    position: relative;
+    height: 100vh;
+    background-image: url("./img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#root {
+    position: absolute;
+    bottom: 80px;
+    right: 180px;
+    width: 900px;
+    height: 450px;
+    background-color: #FFE6F8;
+    background-image: url("./img/BackgroundBig.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 15px;
+    background-blend-mode: lighten;
+    background-position: bottom;
+    padding: 20px;
+}
+
+header {
+    h3 {
+        font-size: 40px;
+        color: red;
+    }
+}
+
+form {
+    font-size: 30px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease-out;
+
+    .my-input-group {
+        width: 100%;
+        input {
+            font-size: 24px;
+            outline: none;
+            width: 80%;
+            border-radius: 10px;
+            border: 2px solid #F61460;
+            padding: 10px 20px;
+        }
+    }
+
+    .submit {
+        img {
+            position: relative;
+            width: 80px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: all 0.1s ease-in;
+            transform: translate(-2px, -2px);
+            &:hover {
+                transform: translate(0, 0);
+            }
+            &:active {
+                transform: translate(2px, 2px);
+            }
+        }
+    }
+}
+
+form.fade-out {
+    opacity: 0;
+    transform: translateY(100px);
+    display: none;
+}
+
+.result {
+    height: 200px;
+    width: 250px;
+    margin: 15px auto 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in;
+    img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+    .bg {
+        position: absolute;
+        top: 2px;
+        height: 98%;
+        left: 2px;
+        width: 98%;
+        display: block;
+        background-color: #7c0000;
+        z-index: 1;
+    }
+    .text {
+        position: absolute;
+        top: 40px;
+        z-index: 4;
+        color: #fff;
+        font-size: 40px;
+    }
+    .percent-bg {
+        width: 98%;
+        height: 0px;
+        position: absolute;
+        bottom: 1%;
+        left: 1%;
+        z-index: 2;
+        background-image: url("./img/AnimBg.gif");
+        transition: all 2s ease-in-out;
+    }
+}
+
+.result.fade-in {
+    height: 200px;
+    width: 250px;
+    margin: 15px auto 0;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.message {
+    width: 800px;
+    height: 50px;
+    font-size: 28px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 3px 0 #FD256B;
+}
+
+.restart {
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: #F3125E;
+    font-size: 24px;
+}

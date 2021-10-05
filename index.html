@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Caculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="root">
+        <header class="text-center">
+            <h3>Năm nghìn một gói tình duyên</h3>
+        </header>
+        <form action="" class="d-flex flex-column align-items-center mt-5">
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="my-input-group text-center">
+                    <label class="d-block" for="name1">Tên bạn là gì:</label>
+                    <input type="text" id="name1">
+                </div>
+                <div class="submit">
+                    <p class="text-center m-0">Click!</p>
+                    <img src="./img/—Pngtree—play heart button_6258980.png" alt="">
+                </div>
+                <div class="my-input-group text-center">
+                    <label class="d-block" for="name2">Tên người ấy thì sao:</label>
+                    <input type="text" id="name2">
+                </div>
+            </div>
+        </form>
+        <div class="result d-flex flex-column align-items-center position-relative">
+            <span class="text d-flex flex-column align-items-center">
+                    <span class="names"></span>
+                    <span>
+                        <span class="percent"></span>
+                        <span>%</span>
+                    </span>
+            </span>
+            <img src="./img/result.png" alt="heart">
+            <span class="percent-bg"></span>
+            <span class="bg"></span>
+
+            <span class="message mt-4"></span>
+            <button class="restart">Bói lại!</button>
+        </div>
+
+    </div>
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
