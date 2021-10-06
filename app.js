@@ -94,7 +94,7 @@ const app = (function() {
                             message.innerText = "Hai bạn đã rơi vào lưới tình rồi đó";
                             break;
                         case (9):
-                            message.innerText = "Tỏ tình ngay, tình yêu không có chỗ cho sự chần chừ đâu <3";
+                            message.innerText = "Hai bạn sinh ra để dành cho nhau. Nhanh lên, thổ lộ đi, tình yêu không thể chần chừ đâu";
                             break;
                         default:
                             message.innerText = "";
@@ -103,7 +103,8 @@ const app = (function() {
                         this.count(resultPercent, htmlPercent);
                         percentBg.style.height = resultPercent + "%"
                 } else {
-                    message.innerText = "Bạn cần nhập đủ 2 tên nha (っ °Д °;)っ"
+                    message.innerText = `Bạn cần nhập đủ 2 tên nha
+                    (っ °Д °;)っ`
                 }
             }
 
