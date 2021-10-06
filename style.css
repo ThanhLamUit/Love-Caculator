@@ -86,7 +86,7 @@ form .my-input-group input {
 
 @media (max-width: 992px) {
   form .my-input-group:last-child {
-    margin-top: 100px;
+    margin-top: 40px;
   }
 }
 
