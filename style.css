@@ -23,6 +23,18 @@ body {
   padding: 20px;
 }
 
+@media (max-width: 992px) {
+  #root {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: unset;
+    height: unset;
+    border-radius: unset;
+  }
+}
+
 header h3 {
   font-size: 40px;
   color: red;
@@ -37,6 +49,27 @@ form {
   transition: all 0.5s ease-out;
 }
 
+form .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+  form .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 form .my-input-group {
   width: 100%;
 }
@@ -48,6 +81,25 @@ form .my-input-group input {
   border-radius: 10px;
   border: 2px solid #F61460;
   padding: 10px 20px;
+}
+
+@media (max-width: 992px) {
+  form .my-input-group:last-child {
+    margin-top: 100px;
+  }
+}
+
+form .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 form .submit img {
@@ -141,11 +193,19 @@ form.fade-out {
   width: 800px;
   height: 50px;
   font-size: 28px;
+  padding: 0 15px;
   background-color: #fff;
   border-radius: 10px;
   text-align: center;
   -webkit-box-shadow: 0 0 3px 0 #FD256B;
           box-shadow: 0 0 3px 0 #FD256B;
+}
+
+@media (max-width: 992px) {
+  .message {
+    width: 90vw;
+    height: 100px;
+  }
 }
 
 .restart {

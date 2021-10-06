@@ -1,4 +1,4 @@
-$breakpoints: ( 'sm': ( min-width: 576px ), 'md': ( min-width: 768px ), 'lg': ( min-width: 992px ), 'xl': ( min-width: 1200px ), 'xxl': ( min-width: 1400px ), ) !default;
+$breakpoints: ( 'sm': ( max-width: 576px ), 'md': ( max-width: 768px ), 'lg': ( max-width: 992px ), 'xl': ( max-width: 1200px ), 'xxl': ( max-width: 1400px ), ) !default;
 
 @mixin on($breakpoint) {
     @media #{inspect(map-get($breakpoints, $breakpoint))} {
@@ -29,6 +29,15 @@ body {
     background-blend-mode: lighten;
     background-position: bottom;
     padding: 20px;
+    @include on('lg') {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: unset;
+        height: unset;
+        border-radius: unset;
+    }
 }
 
 header {
@@ -44,6 +53,15 @@ form {
     transform: translateY(0);
     transition: all 0.5s ease-out;
 
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include on('lg') {
+            flex-direction: column;
+        }
+    }
+
     .my-input-group {
         width: 100%;
         input {
@@ -56,7 +74,16 @@ form {
         }
     }
 
+    .my-input-group:last-child {
+        @include on('lg') {
+            margin-top: 100px;
+        }
+    }
+
     .submit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         img {
             position: relative;
             width: 80px;
@@ -134,10 +161,15 @@ form.fade-out {
     width: 800px;
     height: 50px;
     font-size: 28px;
+    padding: 0 15px;
     background-color: #fff;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 3px 0 #FD256B;
+    @include on('lg') {
+        width: 90vw;
+        height: 100px;
+    }
 }
 
 .restart {

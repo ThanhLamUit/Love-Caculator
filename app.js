@@ -56,52 +56,55 @@ const app = (function() {
                 result.classList.add('fade-in')
                 const name1 = input1.value;
                 const name2 = input2.value;
-                let resultPercent = this.caculate(this.sumName(name1,name2)) % 100;
-                const myCondition = this.caculate(this.sumName(this.convertName(name1),this.convertName(name2)))
-                console.log(myCondition);
-                if(myCondition===944 || myCondition===8553 || myCondition===586 || myCondition===801 || myCondition===618 ) {
-                    resultPercent = 99;
-                }
-                const hook = Math.floor(resultPercent / 10);
-                switch (hook) {
-                    case (0):
-                        message.innerText = "Haizz, bạn nên biết đâu là điểm dừng :((";
-                        break;
-                    case (1):
-                        message.innerText = "Có lẽ chúng ta không hợp nhau :((";
-                        break;
-                    case (2):
-                        message.innerText = "Người qua đường thôi mà";
-                        break;
-                    case (3):
-                        message.innerText = "Bạn bè cũng tốt mà";
-                        break;
-                    case (4):
-                        message.innerText = "Vẫn còn le lói một tia hi vọng";
-                        break;
-                    case (5):
-                        message.innerText = "Hai bạn khá thân đấy chứ!";
-                        break;
-                    case (6):
-                        message.innerText = "Có lẽ người ấy đang nhớ bạn đó";
-                        break;
-                    case (7):
-                        message.innerText = "Thích nhau mà hông dám nói phải hôn";
-                        break;
-                    case (8):
-                        message.innerText = "Hai bạn đã rơi vào lưới tình rồi đó";
-                        break;
-                    case (9):
-                        message.innerText = "Tỏ tình luôn đi, đợi gì nữa <3!!";
-                        break;
-                    default:
-                        message.innerText = "Nhập tên đi rồi bói";
-                }
                 if(name1 && name2) {
-                    htmlNames.innerText = this.convertName(name1) + " & " + this.convertName(name2)
-                    this.count(resultPercent, htmlPercent);
+                    console.log(1)
+                    let resultPercent = this.caculate(this.sumName(name1,name2)) % 100;
+                    const myCondition = this.caculate(this.sumName(this.convertName(name1),this.convertName(name2)))
+                    console.log(myCondition);
+                    if(myCondition===944 || myCondition===586 || myCondition===618 ) {
+                        resultPercent = 95;
+                    }
+                    const hook = Math.floor(resultPercent / 10);
+                    switch (hook) {
+                        case (0):
+                            message.innerText = "Haizz, dừng lại sẽ bớt đau hơn";
+                            break;
+                        case (1):
+                            message.innerText = "Có lẽ chúng ta không hợp nhau :((";
+                            break;
+                        case (2):
+                            message.innerText = "Người qua đường thôi mà";
+                            break;
+                        case (3):
+                            message.innerText = "Người ấy vẫn xem bạn là bạn bè, nhưng đừng buồn nhé!";
+                            break;
+                        case (4):
+                            message.innerText = "Vẫn còn le lói một tia hi vọng, cố lên!";
+                            break;
+                        case (5):
+                            message.innerText = "Hai bạn khá thân đấy chứ!";
+                            break;
+                        case (6):
+                            message.innerText = "Có lẽ người ấy đang nhớ bạn lắm";
+                            break;
+                        case (7):
+                            message.innerText = "Thích nhau mà hông dám nói phải hôn";
+                            break;
+                        case (8):
+                            message.innerText = "Hai bạn đã rơi vào lưới tình rồi đó";
+                            break;
+                        case (9):
+                            message.innerText = "Tỏ tình ngay, tình yêu không có chỗ cho sự chần chừ đâu <3";
+                            break;
+                        default:
+                            message.innerText = "";
+                    }
+                        htmlNames.innerText = this.convertName(name1) + " & " + this.convertName(name2)
+                        this.count(resultPercent, htmlPercent);
+                        percentBg.style.height = resultPercent + "%"
+                } else {
+                    message.innerText = "Bạn cần nhập đủ 2 tên nha (っ °Д °;)っ"
                 }
-                percentBg.style.height = resultPercent + "%"
             }
 
             result.onclick = () => {
