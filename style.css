@@ -48,6 +48,13 @@ form {
           transform: translateY(0);
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
+  margin-top: 30px;
+}
+
+@media (max-width: 992px) {
+  form {
+    margin-top: 10px;
+  }
 }
 
 form .content {
@@ -86,7 +93,7 @@ form .my-input-group input {
 
 @media (max-width: 992px) {
   form .my-input-group:last-child {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 
@@ -218,6 +225,6 @@ form.fade-out {
   position: absolute;
   bottom: 5px;
   right: 10px;
-  font-size: 14px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
