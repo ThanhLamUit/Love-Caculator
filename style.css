@@ -214,4 +214,11 @@ form.fade-out {
   background-color: #F3125E;
   font-size: 24px;
 }
+
+.copy-right {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 14px;
+}
 /*# sourceMappingURL=style.css.map */
